@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:main/services/auth.dart';
 import 'package:main/views/signup.dart';
 import 'package:main/widgets/widgets.dart';
 
@@ -11,9 +12,12 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   final _formKey = GlobalKey<FormState>();
   String email, password;
+  AuthService authService = new AuthService();
 
-  signIn() {
-    if (_formKey.currentState.validate()) {}
+  signIn() async {
+    if (_formKey.currentState.validate()) {
+      await authService.signInEmailAndPass(email, password);
+    }
   }
 
   @override
