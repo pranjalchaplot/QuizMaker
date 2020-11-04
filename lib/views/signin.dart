@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:main/views/signup.dart';
 import 'package:main/widgets/widgets.dart';
 
 class SignIn extends StatefulWidget {
@@ -22,6 +24,7 @@ class _SignInState extends State<SignIn> {
         brightness: Brightness.light,
       ),
       body: Form(
+        key: _formKey,
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
@@ -71,9 +74,21 @@ class _SignInState extends State<SignIn> {
                     "Don't have an account? ",
                     style: TextStyle(fontSize: 16),
                   ),
-                  Text(
-                    "Sign Up",
-                    style: TextStyle(fontSize: 16),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => SignUp(),
+                          ));
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        fontSize: 16,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ),
                 ],
               ),
