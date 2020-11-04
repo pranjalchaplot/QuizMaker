@@ -23,15 +23,30 @@ class _SignInState extends State<SignIn> {
       ),
       body: Form(
         child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
               Spacer(),
               TextFormField(
+                validator: (val) {
+                  return val.isEmpty ? "Enter email" : null;
+                },
                 decoration: InputDecoration(hintText: "Email"),
                 onChanged: (val) {
                   email = val;
                 },
               ),
+              SizedBox(height: 6),
+              TextFormField(
+                validator: (val) {
+                  return val.isEmpty ? "Enter password" : null;
+                },
+                decoration: InputDecoration(hintText: "Password"),
+                onChanged: (val) {
+                  password = val;
+                },
+              ),
+              SizedBox(height: 16)
             ],
           ),
         ),
