@@ -46,7 +46,7 @@ class _SignInState extends State<SignIn> {
                   password = val;
                 },
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 24),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.blue,
@@ -62,6 +62,20 @@ class _SignInState extends State<SignIn> {
                     fontSize: 16,
                   ),
                 ),
+              ),
+              SizedBox(height: 18),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account? ",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    "Sign Up",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 80,
