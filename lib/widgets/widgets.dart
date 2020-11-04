@@ -5,8 +5,19 @@ Widget appBar(BuildContext context) {
     text: TextSpan(
       style: TextStyle(fontSize: 22),
       children: <TextSpan>[
-        TextSpan(text: 'bold ', style: TextStyle(fontWeight: FontWeight.bold)),
-        TextSpan(text: 'bold', style: TextStyle(fontWeight: FontWeight.bold)),
+        TextSpan(
+            text: 'Quiz',
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              color: Colors.black54,
+            )),
+        TextSpan(
+          text: 'Maker',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
       ],
     ),
   );

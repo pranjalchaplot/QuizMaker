@@ -14,6 +14,8 @@ class _SignInState extends State<SignIn> {
         title: Center(
           child: appBar(context),
         ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
     );
   }
