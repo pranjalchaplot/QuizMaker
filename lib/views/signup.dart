@@ -32,7 +32,9 @@ class _SignUpState extends State<SignUp> {
               Spacer(),
               TextFormField(
                 validator: (val) {
-                  return val.isEmpty ? "Enter Name" : null;
+                  return val.isEmpty || val.length < 2
+                      ? "Invalid Username (Needs to be more than 2 characters)"
+                      : null;
                 },
                 decoration: InputDecoration(hintText: "Name"),
                 onChanged: (val) {
