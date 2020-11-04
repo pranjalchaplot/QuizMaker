@@ -62,6 +62,7 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: 24),
               Container(
                 decoration: BoxDecoration(
+                  color: Colors.blueAccent,
                   // gradient: LinearGradient(colors: [
                   //   const Color(0xff020024),
                   //   const Color(0xff090979),
@@ -91,7 +92,7 @@ class _SignUpState extends State<SignUp> {
                     onTap: () {
                       Navigator.pushReplacement(
                           context,
-                          CupertinoPageRoute(
+                          MaterialPageRoute(
                             builder: (context) => SignIn(),
                           ));
                     },

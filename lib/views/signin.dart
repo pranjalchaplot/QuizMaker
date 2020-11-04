@@ -78,7 +78,7 @@ class _SignInState extends State<SignIn> {
                     onTap: () {
                       Navigator.pushReplacement(
                           context,
-                          CupertinoPageRoute(
+                          MaterialPageRoute(
                             builder: (context) => SignUp(),
                           ));
                     },
