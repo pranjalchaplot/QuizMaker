@@ -48,10 +48,23 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 16),
               Container(
-                color: Colors.blue,
-                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                padding: EdgeInsets.symmetric(vertical: 18),
+                alignment: Alignment.center,
                 width: MediaQuery.of(context).size.width - 48,
-                child: Text("Sign In"),
+                child: Text(
+                  "Sign In",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 80,
               )
             ],
           ),
