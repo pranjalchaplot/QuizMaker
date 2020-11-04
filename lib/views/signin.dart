@@ -46,7 +46,13 @@ class _SignInState extends State<SignIn> {
                   password = val;
                 },
               ),
-              SizedBox(height: 16)
+              SizedBox(height: 16),
+              Container(
+                color: Colors.blue,
+                height: 50,
+                width: MediaQuery.of(context).size.width - 48,
+                child: Text("Sign In"),
+              )
             ],
           ),
         ),
